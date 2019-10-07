@@ -158,15 +158,18 @@ p {
   line-height: 1.5;
   font-size: 1.6rem;
   padding-bottom: 10px;
+  transition: all 0.1s ease;
 }
 img {
   max-width: 100%;
   height: auto;
 }
 .container {
-  max-width: 800px;
+  max-width: 62%;
   width: 100%;
   margin: 0 auto;
+  transition: all 0.25s ease;
+  padding: 1%;
 }
 @media (max-width: 500px) {
   .container {
@@ -194,6 +197,9 @@ img {
     padding-top: 10px;
   }
 }
+.main-navigation .nav-container .logo-heading {
+  transition: all 0.5s ease-in;
+}
 @media (max-width: 500px) {
   .main-navigation .nav-container .logo-heading {
     font-size: 3rem;
@@ -215,8 +221,74 @@ img {
   color: #212529;
   text-decoration: none;
 }
-.footer {
+.contact {
+  padding: 2%;
+  margin-top: -1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 62%;
+  margin: 0 auto;
+  font-size: 1.9em;
+}
+.contact form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact form .title {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+.contact form .client-info {
+  padding: 0.5em 0em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.contact form .client-info input {
+  padding: 0.5em;
+  margin: 0.5em;
+}
+@media (max-width: 500px) {
+  .contact form .client-info input {
+    width: 100%;
+  }
+}
+.contact form .checkboxes {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.5em 0em;
+}
+.contact form .checkboxes .box {
+  padding: 0.3em;
+}
+.contact form textarea {
   width: 100%;
+  height: 6em;
+  margin-bottom: 1em;
+}
+.contact form button {
+  font-size: 1.8em;
+  border-radius: 10px;
+  background-color: #0d72c4;
+  color: white;
+  text-align: center;
+  padding: 0.3em 3em;
+  transition: all 0.3s ease;
+  margin-bottom: 1em;
+}
+.footer {
+  width: 62%;
+  margin: 0 auto;
   border-top: 2px dashed #C0C0C0;
   background: #FFEBCD;
 }
