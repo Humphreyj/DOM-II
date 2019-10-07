@@ -1,8 +1,15 @@
 const navLinks = document.querySelectorAll('.nav-link'),
+      header = document.querySelector('header'),
       paragraphs = document.querySelectorAll('p'),
+      buttons = document.querySelectorAll('button'),
       logoHeading = document.querySelector('.logo-heading'),
+      textArea = document.querySelector('textarea'),
+      contact = document.querySelector('.contact'),
+      inputs = document.querySelectorAll('input'),
+      submit = document.querySelector('.btn'),
       container = document.querySelector('.home'),
-      body = document.querySelector('body');
+      body = document.querySelector('body'),
+      footer = document.querySelector('footer');
 console.log(logoHeading);
 
 
@@ -33,16 +40,21 @@ body.addEventListener('dblclick', (e) => {
  
 //text-content - KEYPRESS
 
-
-//CONTAINER - WHEEL
-container.addEventListener('wheel', (e) => {
+//BODY - LOAD
+adventure.addEventListener('load',(e) => {
+    alert('Funs Bus loaded up!');
+})
+//BODY - LOAD
+//BODY - WHEEL
+body.addEventListener('wheel', (e) => {
     
     container.style.backgroundColor = `hsl(${hue}, 100%, 95%)`
+    header.style.backgroundColor = `hsl(${hue}, 100%, 95%)`
+    contact.style.backgroundColor = `hsl(${hue}, 100%, 95%)`
+    footer.style.backgroundColor = `hsl(${hue}, 100%, 95%)`
     hue+= 20;
-    console.log(hue);
-    
 })
-//CONTAINER - WHEEL
+//BODY - WHEEL
 
 
 
@@ -67,3 +79,41 @@ logoHeading.addEventListener('click', (e) => {
     logoHeading.style.padding = '2% 0%';
 })
 //LOGO HEADING - click
+
+//Inputs -Focus
+    inputs.forEach(input => {
+        input.addEventListener('focus' ,(e) => {
+            container.style.opacity = '.4';
+            header.style.display = 'none';
+        })
+    })
+
+//Inputs -Focus
+
+//Inputs -Blur
+inputs.forEach(input => {
+    input.addEventListener('blur' ,(e) => {
+       container.style.opacity = '1';
+       header.style.display = 'block';
+
+
+       
+    })
+})
+
+//Inputs -BLUR
+
+//textArea - onchange
+textArea.addEventListener('change', (e) => {
+    textArea.style.backgroundColor = 'tomato';
+
+})
+//textArea - onchange
+
+//SUBMIT - PREVENT DEFAULT
+submit.addEventListener('click', (e) => {
+    e.preventDefault();
+    submit.textContent = 'Thank You!';
+    
+})
+//SUBMIT - PREVENT DEFAULT
